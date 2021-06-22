@@ -10,10 +10,12 @@ sidebar.style.top = `-${(pictures.length - 1) * 100}vh`;
 upButton.addEventListener("click", () => {
     changeSlide('up');
     mainSlide.style.transform = `translateY(-${activeSlide*height}px)`;
+    sidebar.style.transform = `translateY(${activeSlide*height}px)`;
 });
 downButton.addEventListener("click", () => {
     changeSlide('down');
     mainSlide.style.transform = `translateY(-${activeSlide*height}px)`;
+    sidebar.style.transform = `translateY(${activeSlide*height}px)`;
 });
 
 function changeSlide(direction) {
